@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="980" height="420" viewBox="0 0 980 420" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 22px sans-serif; }
+    .label { font: 16px sans-serif; }
+    .code  { font: 14px monospace; }
+    .box   { fill: #fdfdfd; stroke: #333; stroke-width: 1.6; rx: 10; ry: 10; }
+  </style>
+
+  <text x="490" y="40" text-anchor="middle" class="title">
+    Instance Method vs Static Method vs Class Method
+  </text>
+
+  <rect x="30" y="80" width="300" height="300" class="box"/>
+  <text x="180" y="110" text-anchor="middle" class="label">Undecorated Method</text>
+
+  <text x="50" y="150" class="code">class Demo:</text>
+  <text x="70" y="170" class="code">def compute(a, b):</text>
+  <text x="70" y="190" class="code">    return a + b</text>
+
+  <text x="180" y="240" text-anchor="middle" class="label">Class access:</text>
+  <text x="180" y="260" text-anchor="middle" class="code">Demo.compute(3, 4)</text>
+  <text x="180" y="280" text-anchor="middle" class="code">→ raw function</text>
+
+  <text x="180" y="320" text-anchor="middle" class="label">Instance access:</text>
+  <text x="180" y="340" text-anchor="middle" class="code">d = Demo(); d.compute(3, 4)</text>
+  <text x="180" y="360" text-anchor="middle" class="code">→ self injected</text>
+
+  <rect x="340" y="80" width="300" height="300" class="box"/>
+  <text x="490" y="110" text-anchor="middle" class="label">@staticmethod</text>
+
+  <text x="360" y="150" class="code">class Demo:</text>
+  <text x="380" y="170" class="code">@staticmethod</text>
+  <text x="380" y="190" class="code">def compute(a, b):</text>
+  <text x="380" y="210" class="code">    return a + b</text>
+
+  <text x="490" y="260" text-anchor="middle" class="label">Both class &amp; instance access:</text>
+  <text x="490" y="285" text-anchor="middle" class="code">Demo.compute(3, 4)</text>
+  <text x="490" y="305" text-anchor="middle" class="code">d.compute(3, 4)</text>
+  <text x="490" y="325" text-anchor="middle" class="code">→ raw function (no binding)</text>
+
+  <rect x="650" y="80" width="300" height="300" class="box"/>
+  <text x="800" y="110" text-anchor="middle" class="label">@classmethod</text>
+
+  <text x="670" y="150" class="code">class Demo:</text>
+  <text x="690" y="170" class="code">@classmethod</text>
+  <text x="690" y="190" class="code">def compute(cls, a, b):</text>
+  <text x="690" y="210" class="code">    return a + b</text>
+
+  <text x="800" y="260" text-anchor="middle" class="label">Both class &amp; instance access:</text>
+  <text x="800" y="285" text-anchor="middle" class="code">Demo.compute(3,4)</text>
+  <text x="800" y="305" text-anchor="middle" class="code">d.compute(3,4)</text>
+  <text x="800" y="325" text-anchor="middle" class="code">→ cls = Demo injected</text>
+
+</svg>

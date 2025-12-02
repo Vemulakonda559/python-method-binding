@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="980" height="360" viewBox="0 0 980 360" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 22px sans-serif; }
+    .label { font: 15px sans-serif; }
+    .code  { font: 14px monospace; }
+    .box   { fill: #fafafa; stroke: #333; stroke-width: 1.6; rx: 10; ry: 10; }
+  </style>
+
+  <text x="490" y="40" text-anchor="middle" class="title">
+    How Python Binds Methods (Descriptor Protocol)
+  </text>
+
+  <rect x="40" y="80" width="420" height="240" class="box"/>
+  <text x="250" y="110" text-anchor="middle" class="label">Access: ClassName.method</text>
+
+  <text x="70" y="150" class="code">class Sample:</text>
+  <text x="90"  y="170" class="code">def action(x, y):</text>
+  <text x="90"  y="190" class="code">    return x + y</text>
+
+  <text x="250" y="230" text-anchor="middle" class="label">Descriptor returns raw function</text>
+  <text x="250" y="260" text-anchor="middle" class="code">Sample.action(10, 20)</text>
+  <text x="250" y="285" text-anchor="middle" class="code">→ x=10, y=20</text>
+
+  <rect x="520" y="80" width="420" height="240" class="box"/>
+  <text x="730" y="110" text-anchor="middle" class="label">Access: instance.method</text>
+
+  <text x="550" y="150" class="code">obj = Sample()</text>
+  <text x="550" y="170" class="code">obj.action(10, 20)</text>
+
+  <text x="730" y="230" text-anchor="middle" class="label">Descriptor returns bound method</text>
+  <text x="730" y="260" text-anchor="middle" class="code">→ x=obj, y=10</text>
+  <text x="730" y="285" text-anchor="middle" class="code">Raises TypeError if signature mismatches</text>
+
+</svg>
