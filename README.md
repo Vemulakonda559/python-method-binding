@@ -2,15 +2,13 @@
   <img src="docs/banner.png" width="900" alt="Python Method Binding Explained">
 </p>
 
-# Python Method Binding
+# Python Method Binding Explained
 
 📖 Related Dev.to Article:
 
 [Why Does obj.method() Automatically Receive self? A Deep Dive into Python Method Binding](https://dev.to/vemulakonda559/why-does-objmethod-automatically-receive-self-a-deep-dive-into-python-method-binding-344o)
 
 ---
-
-# Python Method Binding Explained
 
 ![Python Version](https://img.shields.io/badge/python-3.x-blue)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
